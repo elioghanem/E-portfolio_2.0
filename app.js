@@ -31,10 +31,6 @@ function toggleModal() {
     document.body.classList += " modal__open";
 }
 
-function closeModal() {
-    document.body.classList.remove("modal__open");
-}
-
 window.addEventListener('scroll', function() {
     var mailBtn = document.getElementById('mailBtn');
     var footer = document.querySelector('footer');

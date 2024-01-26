@@ -496,15 +496,18 @@ textarea {
     font-weight: 700;
     text-align: center;
     padding: 28px;
+    z-index: -1;
+    display: none;
+}
+
+.modal__overlay--visible-success {
+    z-index: 1;
+    display: flex;
 }
 
 .modal__overlay--visible {
     z-index: 1;
     display: flex;
-}
-
-.modal__overlay--visible-success {
-    z-index: 1;
 }
 
 .modal__exit {
