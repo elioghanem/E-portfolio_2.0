@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="./style.css">
     <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorgin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("wGQjWHfKXG5Wu8Slw");
+        })();
+    </script>
 </head>
 
 <body>
@@ -35,7 +42,7 @@
                     link__hover-effect
                     link--hover-effect--black">Contact</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link click">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -49,19 +56,130 @@
                 <h1 class="title blue">I'm Elio.</h1>
                 <p class="header__para">I'm a <b class="blue">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences. <br> Here 's a bit more <b class="blue">About me.</b></p>
                 <div class="social__list">
-                    <a href="" class="social__link click">
+                    <a href="#" class="social__link click" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="" class="social__link click">
+                    <a href="#" class="social__link click" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="" class="social__link click">
+                    <a href="./img portofolio/Elioghanem,cv.pdf" class="social__link click" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a>
                 </div>
             </div>
         </header>
+        <button class="mail__btn click" id="mailBtn" onclick="toggleModal()">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <a href="#" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__sub--title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">I'm a 20 year-old <b class="blue">Frontend developer</b> with a strong passion for developing websites with great <b class="blue">user experiences.</b
+                    ><br>
+                 I currently work on difficult project and making responsive websites.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./img portofolio/html logo 2.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./img portofolio/css_logoo-removebg-preview.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./img portofolio/js_logo-removebg-preview.png" alt="">
+                        <span class="language__name">JS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./img portofolio/react logoo.png" alt="">
+                        <span class="language__name">REACT</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="closeModal()"></i>
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                <h4 class="modal__sub--title modal__sub-title--contact">I'm currently open to new opportunities</h4>
+                <form id="contact__form"onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--lable">name</label>
+                        <input class="input"name="user_name" type="text"> 
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--lable">Email</label>
+                        <input class="input"name="user_email" type="email"> 
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--lable">Message</label>
+                        <textarea class="input"name="message" type="text"></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send it my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks fo the message! Looking forward to speaking to you soon!
+                </div>
+            </div>
+            
+        </div>
     </section>
+    <section id="project">
+        <div class="container">
+            <div class="row">
+                <h1 class="project__title">
+                    Here are some of my <span class="blue">ptojects</span>
+                    </h1>
+                    <ul class="project__list">
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="./img portofolio/e-com-book-project.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">E-com book shop</h3>
+                                    <h4 class="project__description-sub--title">HTML,CSS,JAVA SCRIPT</h4>
+                                    <p class="project__description--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum ipsam temporibus dignissimos iusto saepe?</p>
+                                    <div class="project__descreption--links">
+                                        <a href="" class="project__description--link"><i class="fab fa-github"></i></a>
+                                        <a href="" class="project__description--link"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="img__link--wrapper">
+                <figure>
+                    <img src="./img portofolio/logo_my_name-removebg-preview.png" alt="" class="footer__img">
+                </figure>
+                <div class="footer__social--links">
+                    <a href="" class="footer__social--link
+                link__hover--effect
+                link__hover-effect--white">Github</a>
+                    <a href="" class="footer__social--link
+                link__hover--effect
+                link__hover-effect--white">Linkedin</a>
+                    <a href="" class="footer__social--link
+                link__hover--effect
+                link__hover-effect--white">Email</a>
+                    <a href="" class="footer__social--link
+                link__hover--effect
+                link__hover-effect--white">Resume</a>
+                </div>
+                <div class="footer__copyRight">Copyright © Elio Ghanem </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
