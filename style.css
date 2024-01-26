@@ -296,6 +296,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 
 .footer__img {
@@ -546,50 +547,89 @@ header {
 /*shape*/
 
 .shape {
-    position: fixed;
+    position: relative;
 }
 
 .shape--0 {
-    top: 15vh;
-    left: 10vh;
+    top: 5vh;
+    left: 0vh;
 }
 
 .shape--1 {
-    top: 15vh;
-    left: 55vw;
+    top: 5vh;
+    left: 45vw;
 }
 
 .shape--2 {
-    top: 15vh;
-    left: 85vw;
+    top: 5vh;
+    left: 75vw;
 }
 
 .shape--3 {
-    top: 50vh;
-    left: 10vw;
+    top: 40vh;
+    left: 0vw;
 }
 
 .shape--4 {
-    top: 50vh;
-    left: 55vw;
+    top: 40vh;
+    left: 45vw;
 }
 
 .shape--5 {
-    top: 50vh;
-    left: 85vw;
+    top: 40vh;
+    left: 75vw;
 }
 
 .shape--6 {
-    top: 80vh;
-    left: 10vw;
+    top: 70vh;
+    left: 0vw;
 }
 
 .shape--7 {
-    top: 80vh;
-    left: 55vw;
+    top: 70vh;
+    left: 45vw;
 }
 
 .shape--8 {
-    top: 80vh;
-    left: 85vw;
+    top: 70vh;
+    left: 75vw;
+}
+
+
+/*toggle dark mode*/
+
+.about__me--click {
+    cursor: pointer;
+}
+
+.toggle__dark--mode section {
+    background-color: #242424;
+}
+
+.toggle__dark--mode .scroll__icon:after {
+    background-color: white;
+}
+
+.toggle__dark--mode .fa-adjust {
+    color: white;
+}
+
+.toggle__dark--mode .scroll__icon {
+    border-color: white;
+}
+
+.toggle__dark--mode #personal-logo {
+    filter: invert(0);
+}
+
+.toggle__dark--mode .nav__link--anchor,
+.toggle__dark--mode .title,
+.toggle__dark--mode .header__para,
+.toggle__dark--mode .project__title {
+    color: white;
+}
+
+.toggle__dark--mode .mail__btn {
+    background-color: white;
+    color: #242424;
 }

@@ -30,6 +30,16 @@ function toggleModal() {
     isModalOpen = true;
     document.body.classList += " modal__open";
 }
+let isDark = false;
+
+function toggleDarkMode() {
+    if (isDark) {
+        isDark = false;
+        return document.body.classList.remove("toggle__dark--mode");
+    }
+    isDark = true;
+    document.body.classList += " toggle__dark--mode";
+}
 
 function moveBackground(event) {
     const shapes = document.querySelectorAll(".shape");
