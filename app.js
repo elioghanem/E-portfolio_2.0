@@ -46,8 +46,7 @@ function moveBackground(event) {
     const scaleFactor = 1 / 20;
     const x = event.clientX * scaleFactor;
     const y = event.clientY * scaleFactor;
-
-    for (let i = 0; i < shapes.length; i++) {
+    for (let i = 0; i < shapes.length; i++) {;
         const isOdd = i % 2 !== 0;
         const oddInteger = isOdd ? -1 : 1;
         shapes[i].style.transform = `translate(${x*oddInteger}px, ${y*oddInteger}px)`;
@@ -57,11 +56,11 @@ function moveBackground(event) {
 
 
 window.addEventListener('scroll', function() {
-    var mailBtn = document.getElementById('mailBtn');
-    var footer = document.querySelector('footer');
+    let mailBtn = document.getElementById('mailBtn');
+    let footer = document.querySelector('footer');
 
-    var footerPosition = footer.getBoundingClientRect().top;
-    var windowHeight = window.innerHeight;
+    let footerPosition = footer.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
 
     if (footerPosition < windowHeight) {
         mailBtn.classList.add('footer-style');
