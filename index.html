@@ -31,7 +31,7 @@
                     link--hover-effect--black">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#project" class="
                     nav__link--anchor
                     link__hover-effect
                     link--hover-effect--black">Projects</a>
@@ -40,7 +40,7 @@
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
-                    link--hover-effect--black">Contact</a>
+                    link--hover-effect--black" onclick="toggleModal()">Contact</a>
                 </li>
                 <li class="nav__link click" onclick="toggleDarkMode()">
                     <a href="#" class="
@@ -56,10 +56,10 @@
                 <h1 class="title blue">I'm Elio.</h1>
                 <p class="header__para">I'm a <b class="blue">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences. <br> Here 's a bit more <b class="blue about__me--click" onclick="toggleModal()">About me.</b></p>
                 <div class="social__list">
-                    <a href="#" class="social__link click" target="_blank">
+                    <a href="https://www.linkedin.com/in/elio-ghanem546" class="social__link click" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="social__link click" target="_blank">
+                    <a href="https://github.com/elioghanem" class="social__link click" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="./img portofolio/Elioghanem,cv.pdf" class="social__link click" target="_blank">
@@ -68,9 +68,9 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click" id="mailBtn" onclick="toggleModal()">
+        <a href="#"><button class="mail__btn click" id="mailBtn" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
-        </button>
+        </button></a>
         <a href="#" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
@@ -108,15 +108,15 @@
                 <form id="contact__form"onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--lable">name</label>
-                        <input class="input"name="user_name" type="text"> 
+                        <input class="input"name="user_name" type="text"required> 
                     </div>
                     <div class="form__item">
                         <label class="form__item--lable">Email</label>
-                        <input class="input"name="user_email" type="email"> 
+                        <input class="input"name="user_email" type="email"required> 
                     </div>
                     <div class="form__item">
                         <label class="form__item--lable">Message</label>
-                        <textarea class="input"name="message" type="text"></textarea>
+                        <textarea class="input"name="message" type="text"required></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">Send it my way</button>
                 </form>
@@ -155,8 +155,8 @@
                                     <h4 class="project__description-sub--title">HTML,CSS,JAVA SCRIPT</h4>
                                     <p class="project__description--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum ipsam temporibus dignissimos iusto saepe?</p>
                                     <div class="project__descreption--links">
-                                        <a href="" class="project__description--link"><i class="fab fa-github"></i></a>
-                                        <a href="" class="project__description--link"><i class="fas fa-link"></i></a>
+                                        <a href="https://github.com/elioghanem/e-com-book-project.git" class="project__description--link" target="_blank"><i class="fab fa-github"></i></a>
+                                        <a href="https://elioghanem.github.io/e-com-book-project/" class="project__description--link"target="_blank"><i class="fas fa-link" ></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -172,18 +172,18 @@
                     <img src="./img portofolio/logo_my_name-removebg-preview.png" alt="" class="footer__img">
                 </figure>
                 <div class="footer__social--links">
-                    <a href="" class="footer__social--link
-                link__hover--effect
-                link__hover-effect--white">Github</a>
-                    <a href="" class="footer__social--link
-                link__hover--effect
-                link__hover-effect--white">Linkedin</a>
-                    <a href="" class="footer__social--link
-                link__hover--effect
-                link__hover-effect--white">Email</a>
-                    <a href="" class="footer__social--link
-                link__hover--effect
-                link__hover-effect--white">Resume</a>
+                    <a href="https://github.com/elioghanem" class="footer__social--link
+                link__hover-effect
+                link__hover-effect--white"target="_blank">Github</a>
+                    <a href="https://www.linkedin.com/in/elio-ghanem546" class="footer__social--link
+                link__hover-effect
+                link__hover-effect--white"target="_blank">Linkedin</a>
+                    <a href="#" class="footer__social--link
+                link__hover-effect
+                link__hover-effect--white" onclick="toggleModal()">Email</a>
+                    <a href="./img portofolio/Elioghanem,cv.pdf" class="footer__social--link
+                link__hover-effect
+                link__hover-effect--white"target="_blank">Resume</a>
                 </div>
                 <div class="footer__copyRight">Copyright © Elio Ghanem </div>
             </div>
