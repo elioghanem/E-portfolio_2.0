@@ -71,7 +71,7 @@ window.addEventListener('scroll', function() {
 });
 
 function openMenu() {
-    document.body.classList += ("open__menu");
+    document.body.classList += (" open__menu");
 }
 
 function closeMenu() {
