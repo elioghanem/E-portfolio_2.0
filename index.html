@@ -49,7 +49,44 @@
                     link--hover-effect--black"><i class="fas fa-adjust"></i></a>
                 </li>
             </ul>
+            <div class="show-menu">
+                <button class="btn__menu" onclick="openMenu()">
+                <i class="fas fa-bars "></i>
+            </button>
+                <li class="nav__link click" onclick="toggleDarkMode()">
+                    <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                link--hover-effect--black"><i class="fas fa-adjust"></i></a>
+                </li>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close " onclick="closeMenu()">
+                    <i class="fas fa-times "></i>
+                 </button>
+                    <ul class="nav__link--list-backdrop">
+                        <li class="nav__link">
+                            <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link--hover-effect--black">About</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#project" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link--hover-effect--black">Projects</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link--hover-effect--black" onclick="toggleModal()">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
         <header class="header">
             <div class="header__content">
                 <h1 class="title">Hey</h1>

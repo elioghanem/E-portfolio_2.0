@@ -666,3 +666,57 @@
     .link__hover-effect:after {
         transition: all 300ms ease;
     }
+    /*backdrop-menu*/
+    
+    .menu__backdrop {
+        position: absolute;
+        top: 0;
+        right: 2px;
+        width: 100%;
+        height: 250px;
+        background-color: #959292;
+        z-index: 100;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 300ms ease;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .open__menu .menu__backdrop {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .btn__menu {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #242424;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 300ms ease;
+    }
+    
+    .btn__menu:hover {
+        color: #959292;
+    }
+    
+    @media(max-width:800px) {
+        .nav__link--list {
+            display: none;
+        }
+        .show-menu {
+            display: flex;
+        }
+    }
+    
+    @media(min-width:800px) {
+        .show-menu {
+            display: none;
+        }
+    }
