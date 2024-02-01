@@ -38,7 +38,7 @@ function toggleDarkMode() {
         return document.body.classList.remove("toggle__dark--mode");
     }
     isDark = true;
-    document.body.classList += " toggle__dark--mode";
+    document.body.classList += "toggle__dark--mode";
 }
 
 function moveBackground(event) {
