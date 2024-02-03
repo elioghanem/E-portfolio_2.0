@@ -23,12 +23,17 @@ let isModalOpen = false;
 
 function toggleModal() {
 
+    const mailBtn = document.getElementById("mailBtn");
+
     if (isModalOpen) {
         isModalOpen = false;
-        return document.body.classList.remove("modal__open");
+        document.body.classList.remove("modal__open");
+        mailBtn.classList.remove("hidden");
+    } else {
+        isModalOpen = true;
+        document.body.classList.add("modal__open");
+        mailBtn.classList.add("hidden");
     }
-    isModalOpen = true;
-    document.body.classList += " modal__open";
 }
 let isDark = false;
 
@@ -76,4 +81,9 @@ function openMenu() {
 
 function closeMenu() {
     document.body.classList.remove("open__menu");
+}
+
+function toggleModalAndCloseMenu() {
+    toggleModal();
+    closeMenu();
 }
