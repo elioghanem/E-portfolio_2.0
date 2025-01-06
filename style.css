@@ -352,6 +352,10 @@
         .link__hover-effect--white:after {
             background-color: white;
         }
+        
+        .img__link--wrapper {
+            display: flex;
+        }
         /*modal*/
         
         .modal {
@@ -738,6 +742,9 @@
         }
         
         @media(max-width:800px) {
+            .shape {
+                display: none;
+            }
             .nav__link--list {
                 display: none;
             }
